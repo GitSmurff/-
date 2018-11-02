@@ -1,0 +1,11 @@
+﻿"ConsoleApplication2.exe" (Win32). Загружено "D:\Документы\Политех\2 курс\С++\ЛБ 3\ConsoleApplication2\Debug\ConsoleApplication2.exe". Символы загружены.
+"ConsoleApplication2.exe" (Win32). Загружено "C:\Windows\SysWOW64\ntdll.dll". Невозможно найти или открыть PDB-файл.
+"ConsoleApplication2.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". Невозможно найти или открыть PDB-файл.
+"ConsoleApplication2.exe" (Win32). Загружено "C:\Windows\SysWOW64\KernelBase.dll". Невозможно найти или открыть PDB-файл.
+"ConsoleApplication2.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcp140d.dll". Невозможно найти или открыть PDB-файл.
+"ConsoleApplication2.exe" (Win32). Загружено "C:\Windows\SysWOW64\vcruntime140d.dll". Невозможно найти или открыть PDB-файл.
+"ConsoleApplication2.exe" (Win32). Загружено "C:\Windows\SysWOW64\ucrtbased.dll". Невозможно найти или открыть PDB-файл.
+Поток 0x1e58 завершился с кодом -1073741510 (0xc000013a).
+Поток 0x2408 завершился с кодом -1073741510 (0xc000013a).
+Поток 0x738 завершился с кодом -1073741510 (0xc000013a).
+Программа "[2412] ConsoleApplication2.exe" завершилась с кодом -1073741510 (0xc000013a).

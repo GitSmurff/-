@@ -1,0 +1,166 @@
+исправить 1)
+#include "iostream"
+int main()
+{
+	int x = 9;
+	int *pInt;
+	pInt = &x;
+	cout << *pInt << endl;
+	return 0;
+}
+исправить 2)
+#include "iostream"
+int main()
+{
+	int someVarible = 5;
+	cout << someVarible << endl;
+	int *pVar = &someVarible;
+	int x = 9;
+	x = *pVar;
+	cout << *pVar << endl;
+	return 0;
+}
+
+1) 
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+void f(short int *p);
+int _tmain(int argc, _TCHAR* argv[])
+{
+	short int i;
+	short int *j;
+	j = &i;
+	f(j);
+	cout << i << endl;
+	system("pause");
+	return 0;
+}
+void f(short int *p)
+{
+	*p = 100;
+}
+
+2)
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x;
+	int& y = x;
+	int* z = &x;
+	y = 10;
+	*z = 6;
+	cout << y << endl;
+	cout << *z << endl;
+	system("pause");
+	return 0;
+}
+3)
+#include "iostream"
+using namespace std;
+int main()
+{
+	int *x = new int;
+	*x = 10;
+	cout << *x << endl;
+	delete x;
+	*x = 20;
+	cout << *x << endl;
+	system("pause");
+	return 0;
+}
+4)
+
+3)
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int *x = new int;
+	*x = 10;
+	cout << *x << endl;
+	delete x;
+	long *j = new long;
+	*j = 1000;
+	cout << *j << endl;
+	*x = 20;
+	cout << *x << endl;
+	cout << *j << endl;
+	delete j;
+	system("pause");
+	return 0;
+}
+
+4)
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int *x = new int;
+	*x = 10;
+	cout << *x << endl;
+	delete x;
+	long *j = new long;
+	*j = 1000;
+	cout << *j << endl;
+	delete j;
+	j = NULL;
+	x = NULL;
+	delete x;
+	system("pause");
+	return 0;
+}
+
+вариант 5)
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+char* f(char* s, char** e) {
+	char* p, *i, *j;
+	while (*s) {
+		p = s + 1;
+		while (*p) {
+			if (*p == *s && *(p + 1) == *(s + 1))
+				break;
+			p++;
+		}
+		if ((p - s) > 1) {
+			i = s;
+			j = p;
+			while (*i && (*i == *j)) {
+				j++;
+				i++;
+			}
+
+			if (i == p) {
+				if (e != 0)
+					*e = j;
+				return s;
+			}
+		}
+		s++;
+	}
+	return 0;
+}
+int main() {
+	setlocale(LC_ALL, "rus");
+	char* p, *e;
+	int size = 256;
+	char* s = new char[size];
+	cin.getline(s, size);
+	p = f(s, 0);
+	//найти все пары
+	for (p = &s[0]; (p = f(p, &e)) != 0; p = e) {
+		while (p != e)
+			cout << *p++;
+		cout << endl;
+	}
+	system("pause");
+	return 0;
+}
